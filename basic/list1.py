@@ -20,9 +20,15 @@
 # strings where the string length is 2 or more and the first
 # and last chars of the string are the same.
 # Note: python does not have a ++ operator, but += works.
+
 def match_ends(words):
-  # +++your code here+++
-  return
+  count = 0
+
+  for string in words:
+    if len(string) >= 2 and string[0] == string[-1]:
+      count +=1
+
+  return count
 
 
 # B. front_x
@@ -32,9 +38,17 @@ def match_ends(words):
 # ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
+
+
+# THIS ONE DOESNT WORK YET
 def front_x(words):
-  # +++your code here+++
-  return
+  xwords = []
+  for word in words:
+    if word[0] == 'x':
+      xwords.append(word)
+      words.remove(word)
+
+  return sorted(xwords) + sorted(words)
 
 
 
