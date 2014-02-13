@@ -60,11 +60,20 @@ def front_x(words):
 # Hint: use a custom key= function to extract the last element form each tuple.
 def sort_last(tuples):
   # +++your code here+++
+  diction = {}
 
-  for tuple in tuples:
-    #how to refer to tuple's position in tuples?
+  for thing in tuples:
+    diction[thing[-1]] = thing
 
-  return
+  newtuples = []
+  i = 0
+
+  while i <= 100:
+    if i in diction.keys():
+      newtuples.append(diction[i])
+
+    i = i + 1
+  return newtuples
 
 
 # Simple provided test() function used in main() to print
